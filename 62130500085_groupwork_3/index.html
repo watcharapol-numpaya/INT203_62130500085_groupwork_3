@@ -1,0 +1,105 @@
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Basic Vue Js - HelloWorld App</title>
+
+
+
+  <!-- https://google.github.io/material-design-icons/#icon-font-for-the-web -->
+
+  <!-- Using via Google Web Fonts -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+
+  <!-- https://tailwindcss.com/docs/installation -->
+
+  <!-- Using Tailwind via CDN -->
+
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+
+
+
+  <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
+  
+  <!-- Vue CDN -->
+
+  <script src="https://unpkg.com/vue@next"></script>
+
+
+
+
+
+</head>
+
+<body>
+  <div id="app">
+    <div class="bg-grey-light py-8 w-full flex justify-center items-center bg-gray-200">
+      <div class="bg-white rounded w-4/6 shadow hover:shadow-md duration-4 bg-gray-300">
+
+        <div class="flex flex-row justify-between uppercase font-bold text-blue-dark border-b-2 p-6 ">
+          <p class="mx-auto font-bold text-3xl">Dog Gallery
+            <p>
+              <div class="cursor-pointer text-grey-dark hover:text-blue duration-4"><i class="fas fa-ellipsis-v"></i>
+              </div>
+        </div>
+        <div class="flex text-lg font-bold text-pink-500 mt-4 ml-10">
+          <span class="material-icons mx-2">
+            favorite
+          </span>
+          <p>favorite({{likeCount}})</p>
+        </div>
+        <div class="p-6 text-grey-darker text-center flex flex-col  ">
+
+          <li v-for="(task,index) in tasks" class="list-none  ">
+
+            <span class="text-grey-darker text-lg font-medium   ">
+              {{task.title}}
+              <span class="material-icons">
+                favorite_border
+              </span>
+            </span>
+            <img v-bind:src="task.src" v-on:click="toggleShow(index)"
+              class="w-64 flex self-center rounded-full shadow-lg mb-6 b-10 border-green-100 border-8 m-4  mx-auto ">
+
+
+            <div class="flex ml-5" v-show="task.show  ">
+              <span class="text-grey-darker mx-auto mb-4 ">
+                {{task.detail}}
+              </span>
+              <button class="bg-pink-500 text-white  py-1 px-2 rounded" v-on:click="toggleLike(index)">
+                Love
+              </button>
+
+            </div>
+
+            <div v-show="task.like">
+              <span class="material-icons">
+                favorite
+              </span>
+            </div>
+
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+ 
+
+
+
+  <!-- my main.js -->
+
+  <script src="./main.js"></script>
+
+</body>
