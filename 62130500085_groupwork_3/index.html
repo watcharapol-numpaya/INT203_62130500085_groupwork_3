@@ -25,7 +25,7 @@
 
 
   <!-- https://v3.vuejs.org/guide/installation.html#release-notes -->
-  
+
   <!-- Vue CDN -->
 
   <script src="https://unpkg.com/vue@next"></script>
@@ -38,50 +38,51 @@
 
 <body>
   <div id="app">
-    <div class="bg-grey-light py-8 w-full flex justify-center items-center bg-gray-200">
-      <div class="bg-white rounded w-4/6 shadow hover:shadow-md duration-4 bg-gray-300">
+    <div class="  py-8 w-full flex justify-center items-center bg-yellow-200  ">
+      <div class="  rounded w-4/6 shadow     bg-yellow-500    ">
 
-        <div class="flex flex-row justify-between uppercase font-bold text-blue-dark border-b-2 p-6 ">
-          <p class="mx-auto font-bold text-3xl">Dog Gallery
-            <p>
-              <div class="cursor-pointer text-grey-dark hover:text-blue duration-4"><i class="fas fa-ellipsis-v"></i>
-              </div>
+        <div class="flex flex-row justify-between uppercase font-bold text-blue-dark border-b-2 p-6  bg-yellow-700">
+          <p class="mx-auto font-bold text-3xl">Dog Gallery <p>
         </div>
-        <div class="flex text-lg font-bold text-pink-500 mt-4 ml-10">
+
+        <div class="flex text-lg font-bold text-pink-500 mt-4 ml-10  ">
           <span class="material-icons mx-2">
             favorite
           </span>
-          <p>favorite({{likeCount}})</p>
+          <p class=" ">favorite ({{countLove}})</p>
         </div>
+
         <div class="p-6 text-grey-darker text-center flex flex-col  ">
 
           <li v-for="(task,index) in tasks" class="list-none  ">
 
-            <span class="text-grey-darker text-lg font-medium   ">
+            <div class="text-grey-darker text-lg font-medium flex justify-center ">
               {{task.title}}
-              <span class="material-icons">
-                favorite_border
-              </span>
-            </span>
-            <img v-bind:src="task.src" v-on:click="toggleShow(index)"
-              class="w-64 flex self-center rounded-full shadow-lg mb-6 b-10 border-green-100 border-8 m-4  mx-auto ">
+              <button class=" focus:outline-none text-pink-500 " v-on:click="toggleLike(index)">
 
+                <i class="material-icons ml-2  transform hover:scale-125 " v-show="task.lovebor">
+                  favorite_border
+                </i>
 
-            <div class="flex ml-5" v-show="task.show  ">
-              <span class="text-grey-darker mx-auto mb-4 ">
-                {{task.detail}}
-              </span>
-              <button class="bg-pink-500 text-white  py-1 px-2 rounded" v-on:click="toggleLike(index)">
-                Love
+                <i class="material-icons ml-2 transform hover:scale-125" v-show="task.lovebold">
+                  favorite
+                </i>
+
               </button>
+            </div>
+            <img v-bind:src="task.src" v-on:click="toggleShow(index)"
+              class="w-64 flex self-center rounded-full shadow-lg mb-6 b-10 border-yellow-400 border-8 m-4  mx-auto transform hover:scale-110">
+
+
+            <div class="flex ml-5 " v-show="task.showdetail  ">
+              <p class="text-grey-darker mx-auto mb-4 bg-yellow-100 rounded-full transform hover:scale-105">
+                {{task.detail}}
+              </p>
+
 
             </div>
 
-            <div v-show="task.like">
-              <span class="material-icons">
-                favorite
-              </span>
-            </div>
+
 
           </li>
         </div>
@@ -94,7 +95,7 @@
 
 
 
- 
+
 
 
 
