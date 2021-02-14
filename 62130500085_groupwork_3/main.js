@@ -18,7 +18,7 @@ const app = {
                     lovebold: false
                 },
                 {
-                    title: 'Golden',
+                    title: 'Pug',
                     src: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Mops_oct09_cropped2.jpg',
                     detail: 'The pug is a breed of dog with physically distinctive features of a wrinkly, short-muzzled face, and curled tail. The breed has a fine, glossy coat that comes in a variety of colours, most often light brown (fawn) or black, and a compact, square body with well-developed muscles. ',
 
@@ -26,7 +26,7 @@ const app = {
                     lovebold: false
                 },
                 {
-                    title: 'Golden',
+                    title: 'chiwawa',
                     src: 'https://i.pinimg.com/originals/7b/7b/b8/7b7bb80169c31df6b4251aa967758020.jpg',
                     detail: 'The Chihuahua is a balanced, graceful dog of terrier-like demeanor, weighing no more than 6 pounds. The rounded “apple” head is a breed hallmark. The erect ears and full, luminous eyes are acutely expressive. Coats come in many colors and patterns, and can be long or short.',
 
